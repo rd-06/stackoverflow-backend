@@ -4,7 +4,6 @@ import axios from 'axios';
 import { makeResponse } from '../../lib';
 import { createUser } from '../../services/user';
 
-
 router.post('/', async (req, res) => {
   const { name } = req.body;
 

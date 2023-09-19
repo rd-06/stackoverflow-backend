@@ -8,7 +8,7 @@ const answerMetaSchema = new Schema({
         type: Boolean,
         default: false
     }
-}, { _id: false })
+}, { _id: false });
 
 const questionMetaSchema = new Schema({
     title: {
@@ -28,14 +28,14 @@ const questionAnswerSchema = new Schema({
         type: String
     },
     questionMeta: {
-        type: questionMetaSchema,
+        type: questionMetaSchema
     },
     answerMeta: {
         type: [answerMetaSchema]
     },
     createdBy: {
         type: String
-    },
+    }
 }, { timestamps: true });
 
 const QUESTIONANSWER = mongoose.model('QUESTIONANSWER', questionAnswerSchema);

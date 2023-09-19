@@ -15,11 +15,9 @@ const findQuery = async (search: Object) => {
         console.log('check_find');
         QUESTIONANSWER.find(search)
             .lean()
-            .then(documents => resolve(documents))
+            .then(resolve)
             .catch(reject);
     });
 };
-
-
 
 export { updateQuery, findQuery };

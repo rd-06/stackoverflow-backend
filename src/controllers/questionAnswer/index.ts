@@ -1,10 +1,9 @@
 import { Router } from 'express';
 const router = Router();
-import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import { makeResponse } from '../../lib';
 import { findQuery, updateQuery } from '../../services/questionAnswer';
-
 
 router.post('/update-query', async (req, res) => {
     const { _question } = req.body;
@@ -21,7 +20,6 @@ router.post('/update-query', async (req, res) => {
         await makeResponse(res, 400, false, error.message, undefined);
     }
 });
-
 
 router.get('/get-queries', async (req, res) => {
     const { } = req.body;
