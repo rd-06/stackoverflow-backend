@@ -2,13 +2,16 @@ import { Router } from 'express';
 const router = Router();
 import axios from 'axios';
 import { makeResponse } from '../../lib';
+import { createUser } from '../../services/user';
 
 
-router.post('/user-details', async (req, res) => {
-  const { userId, name, email, phone, location, strapiId } = req.body;
+router.post('/', async (req, res) => {
+  const { name } = req.body;
 
   try {
-    await makeResponse(res, 200, true, '', response?.data?.data?.id || '');
+    console.log('in');
+    const response = await createUser(name);
+    await makeResponse(res, 200, true, '', response || '');
   } catch (error) {
     await makeResponse(res, 400, false, error.message, undefined);
   }

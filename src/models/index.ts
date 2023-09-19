@@ -1,2 +1,2 @@
-export * from './messages';
+export * from './questionAnswer';
 export * from './user';

@@ -21,7 +21,7 @@ const appLoader = async (app: Express, router: any) => new Promise<any>(resolve 
     extended: true
   }));
   app.use(morgan('dev'));
-  app.use('/artificial-intelligence', router);
+  app.use('/', router);
   app.use(async (req, res) => {
     await makeResponse(res, 404, false, 'the resource you are looking for is not found', undefined);
   });
