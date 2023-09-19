@@ -1,0 +1,20 @@
+{
+  "name": "stackoverflow_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon index.ts --config ./nodemon.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rd-06/stackoverflow-backend.git"
+  },
+  "author": "RD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rd-06/stackoverflow-backend/issues"
+  },
+  "homepage": "https://github.com/rd-06/stackoverflow-backend#readme"
+}
