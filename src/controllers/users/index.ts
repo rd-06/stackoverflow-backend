@@ -8,7 +8,6 @@ router.post('/', async (req, res) => {
   const { name } = req.body;
 
   try {
-    console.log('in');
     const response = await createUser(name);
     await makeResponse(res, 200, true, '', response || '');
   } catch (error) {
